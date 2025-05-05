@@ -1,0 +1,299 @@
+discord:
+  prefix: '!'
+  token: Yourdiscordtokenhere
+fivem_errors:
+  artifact_version:
+    description: ESX kräver en nyare version av FiveM Artifact
+    solutions:
+    - Uppdatera din FiveM Artifact version
+    - Kontrollera ESX versionskraven
+    - Säkerställ att alla dependencies är uppdaterade
+    - Starta om FiveM efter uppdateringen
+    title: ' FiveM Artifact Version Error'
+    triggers:
+    - artifact version
+    - requires a minimum
+    - please update
+    - esx
+  auth_error:
+    description: Problem med inloggning till servern
+    solutions:
+    - Kontrollera dina inloggningsuppgifter
+    - Försök logga ut och in igen i FiveM
+    - Rensa din FiveM cache
+    - Kontakta server administratören
+    title: ' Autentiseringsfel'
+    triggers:
+    - authentication failed
+    - invalid token
+  connection:
+    description: Kunde inte ansluta till servern
+    solutions:
+    - Kontrollera att servern är igång
+    - Verifiera att UDP-portarna är öppna
+    - Kontrollera din brandvägg
+    - Testa att pinga servern
+    - Kontrollera din internetanslutning
+    title: ' Anslutningsfel'
+    triggers:
+    - couldn't connect
+    - failed to get info
+    - connection rejected
+  database_error:
+    description: 'Det verkar vara ett problem med databasen. Här är några möjliga
+      lösningar:'
+    solutions:
+    - Kontrollera att databasens namn är korrekt angiven i mysql.cfg
+    - Gå till [MySQL Panel](https://panel.penguinhosting.host/MySql) för att verifiera
+      ditt databasnamn
+    - Lägg till ditt databasnamn i mysql.cfg under database=
+    - Om problemet kvarstår, kontakta en administratör
+    title: Database Connection Error
+    triggers:
+    - no database selected
+    - ZERUNDLDBYERRDR
+    - UnhandledPromiseRejectionWarning
+  flask_error:
+    description: 'Det verkar vara ett problem med Flask-applikationens trådar. Här
+      är några möjliga lösningar:'
+    solutions:
+    - Starta om Flask-applikationen
+    - 'Kontrollera att alla nödvändiga paket är installerade: pip install flask watchdog'
+    - Se till att du kör Python 3.7 eller senare
+    - Rensa alla temporära Python-filer (.pyc)
+    - 'Om problemet kvarstår, prova att köra Flask utan debug mode: debug=False'
+    title: Flask Threading Error
+    triggers:
+    - 'TypeError: ''handle'' must be a _ThreadHandle'
+    - threading.Thread.start
+    - daemon=self.daemon
+  script_error:
+    description: Problem med server skript
+    solutions:
+    - Kontrollera att alla required scripts är installerade
+    - Uppdatera dina skript
+    - Rensa din cache mapp
+    - Starta om FiveM klienten
+    title: ' Skriptfel'
+    triggers:
+    - script error
+    - failed to load
+    - missing dependency
+  server_full:
+    description: Servern är full just nu
+    solutions:
+    - Vänta tills en plats blir ledig
+    - Försök igen senare
+    - Kontrollera server status på Discord
+    title: ' Server Full'
+    triggers:
+    - server is full
+    - no available slots
+  udp:
+    description: Problem med UDP-anslutningen
+    solutions:
+    - Öppna nödvändiga UDP-portar i din router
+    - Kontrollera serverens brandväggsregler
+    - Verifiera att din ISP inte blockerar UDP-trafik
+    - Testa att tillfälligt inaktivera brandväggen
+    title: ' UDP Anslutningsfel'
+    triggers:
+    - udp packets
+    - allowing udp
+image_processing:
+  enabled: true
+  ocr:
+    enabled: true
+    language: eng
+  supported_formats:
+  - .png
+  - .jpg
+  - .jpeg
+  - .gif
+  temp_dir: temp
+image_rules:
+  empty_image:
+    last_used: null
+    response: Är inte tillräckligt smart för att hitta problemet än. Jag är bara en
+      pingvin!
+    uses: 0
+keywords:
+  ? 'tadminpenguinhostinghost x = +
+
+    dmin.penguinhosting.host
+
+    Webbplatsen kan inte nas
+
+    txadmin.penguinhosting.host tog fdr lang tid pa sig att svara.
+
+    Testa att
+
+    * kontrollera anslutningen
+
+    * kontrollera proxyn och brandvaggen
+
+    * k6ra natverksdiagnostik for Windows
+
+    ERR CONNECTION. TIMED, OUT'
+  : cooldown: 30
+    last_used: null
+    response: '* Var säker på att du har start server via huvud panel.
+
+
+      * Tryck på txadmin link på huvud panel så du använder rätt domain'
+    tags:
+    - learned
+    uses: 0
+learning:
+  enabled: true
+  max_responses: 1000
+  min_confidence: 0.7
+  responses: {}
+learning_system:
+  enabled: true
+  max_questions: 100
+  min_confidence: 0.7
+  response_timeout: 300
+moderation:
+  enabled: true
+  settings:
+    actions:
+      high:
+        duration: 300
+        message: Your message was removed and you have been timed out due to severe
+          content violation.
+      low:
+        duration: 0
+        message: Please watch your language. This is a friendly warning.
+      medium:
+        duration: 0
+        message: Your message was removed due to inappropriate content. Please keep
+          it clean.
+    auto_moderation:
+      delete_threshold: 0.7
+      max_violations: 3
+      timeout_duration: 300
+    severity_levels:
+      high: 0.8
+      low: 0.3
+      medium: 0.6
+  swear_words:
+  - your_custom_word_1
+  - your_custom_word_2
+moderation_system:
+  enabled: true
+  settings:
+    actions:
+      high:
+        duration: 300
+        message: Your message was removed and you have been timed out due to severe
+          content violation.
+      low:
+        duration: 0
+        message: Please watch your language. This is a friendly warning.
+      medium:
+        duration: 0
+        message: Your message was removed due to inappropriate content. Please keep
+          it clean.
+    auto_moderation:
+      delete_threshold: 0.7
+      max_violations: 3
+      timeout_duration: 300
+    severity_levels:
+      high: 0.8
+      low: 0.3
+      medium: 0.6
+  swear_words:
+  - fuck
+  - shit
+  - damn
+response_templates:
+  error:
+  - Tyvärr kunde jag inte hjälpa dig just nu. Försök igen senare.
+  - Ett fel uppstod. Kan du försöka omformulera din fråga?
+  greeting:
+  - Hej! Hur kan jag hjälpa dig?
+  - Välkommen! Vad kan jag göra för dig?
+  stuck:
+  - Jag förstår att du sitter fast. Kan du beskriva problemet mer specifikt?
+  - Det låter frustrerande. Vad har du försökt hittills?
+  - Jag är här för att hjälpa. Vad är det du försöker göra?
+responses:
+  errors:
+    general:
+      message: Ett oväntat fel uppstod. Försök igen senare.
+      title: ' Ett fel uppstod'
+    processing:
+      message: Tyvärr kunde jag inte behandla ditt meddelande just nu.
+      title: ' Behandlingsfel'
+  file_search:
+    responses:
+      not_found:
+        message: Tyvärr kunde jag inte hitta det du letar efter.
+        title: 'Fil Saknas '
+      success:
+        message: 'Här är filen du letar efter:
+
+          {path}'
+        title: 'Fil Hittad! '
+    triggers:
+    - where
+    - find
+    - var
+    - hitta
+  greetings:
+    cooldown: 5
+    responses:
+    - 'Hej {username}! '
+    - 'Hallå där! Hur kan jag hjälpa dig? '
+    - Tjena! Vad kan jag göra för dig?
+    triggers:
+    - hej
+    - hallå
+    - tjena
+    - goddag
+    - god morgon
+    - god kväll
+settings:
+  cooldown: 5
+  language: sv
+  learning_enabled: true
+  max_response_length: 2000
+stats:
+  last_reset: null
+  response_history: []
+  total_images_analyzed: 0
+  total_messages: 0
+  total_responses: 0
+  unanswered_questions: []
+stuck_messages:
+  additional_info:
+  - Detta är ett vanligt problem som kan uppstå av olika anledningar
+  - Om problemet fortsätter, kontakta en administratör
+  - Spara gärna en skärmdump om det händer igen
+  cooldown: 30
+  responses:
+    initial:
+    - 'Jag förstår att du sitter fast. Här är några saker du kan prova:'
+    - 'Det låter frustrerande. Låt mig hjälpa dig med några lösningar:'
+    - 'Jag är här för att hjälpa. Här är vad du kan göra:'
+  solutions:
+  - Tryck F8 för att öppna konsolen och skriv /tp för att teleportera dig
+  - Prova att logga ut och in igen på servern
+  - Använd kommandot /respawn i chatten
+  - Om inget annat fungerar, starta om din FiveM klient
+  triggers:
+  - sitter fast i lufen
+  - fastnat i luften
+  - kan inte röra mig
+  - svävar i luften
+users:
+  default_admin:
+    password: admin
+    role: admin
+    username: admin
+web:
+  host: 0.0.0.0
+  port: 5006
+  secret_key: your-secret-key-here
+  session_duration: 3600
