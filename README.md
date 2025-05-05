@@ -40,14 +40,26 @@ Python 3.8+
 Discord.py
 Flask
 PyYAML
+Tesseract-OCR
 ```
+
+### Installing Tesseract-OCR
+1. Download the Tesseract installer from the [UB-Mannheim repository](https://github.com/UB-Mannheim/tesseract/wiki)
+2. Run the installer (e.g., `tesseract-ocr-w64-setup-5.3.1.20230401.exe`)
+3. During installation:
+   - Remember the installation path (default is `C:\Program Files\Tesseract-OCR`)
+   - Add Tesseract to the system PATH when prompted
+4. Verify installation by opening a new command prompt and typing:
+   ```bash
+   tesseract --version
+   ```
 
 ## 🚀 Quick Start
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/discord-ai-bot.git
-cd discord-ai-bot
+git clone https://github.com/laggis/discord-ai-dashboard.git
+cd discord-ai-dashboard
 ```
 
 2. **Install dependencies**
@@ -60,10 +72,20 @@ pip install -r requirements.txt
 - Add your Discord bot token
 - Configure other settings as needed
 
-4. **Start the bot and web server**
-```bash
-python web_config.py
-```
+4. **Configure the start batch file**
+- Open `start ai.bat` in a text editor
+- Change the directory path to match your installation:
+  ```batch
+  cd /d "C:\Path\To\Your\Bot\Directory"
+  ```
+
+5. **Start the bot and web server**
+- Double-click `start ai.bat` to run both the bot and web server
+- Or run them separately:
+  ```bash
+  python web_config.py
+  python AI.py
+  ```
 
 5. **Access the dashboard**
 - Open http://localhost:5006 in your browser
@@ -162,7 +184,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🆘 Support
 
 For support:
-1. Check the [Issues](https://github.com/yourusername/discord-ai-bot/issues) page
+1. Check the [Issues](https://github.com/laggis/discord-ai-dashboard/issues) page
 2. Create a new issue if needed
 3. Join our Discord server for community support
 
